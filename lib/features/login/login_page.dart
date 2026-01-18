@@ -69,7 +69,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.surface,
+                      color: theme.colorScheme.surfaceContainer,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Form(
@@ -111,7 +111,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           const SizedBox(height: 20),
                           SizedBox(
                             height: 48,
-                            child: ElevatedButton(
+                            child: FilledButton(
                               onPressed: _isSubmitting ? null : _submit,
                               child: Text(
                                 _isSubmitting ? '登入中...' : '登入',
@@ -122,7 +122,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             const SizedBox(height: 16),
                             Text(
                               _errorMessage!,
-                              style: TextStyle(
+                              style: theme.textTheme.bodyMedium?.copyWith(
                                 color: theme.colorScheme.error,
                               ),
                               textAlign: TextAlign.center,

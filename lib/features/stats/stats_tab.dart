@@ -95,6 +95,7 @@ class _MealCard extends StatelessWidget {
     final namesText = hasOrders ? stats.names.join('、') : '尚無人點餐';
 
     return Card(
+      color: theme.colorScheme.surfaceContainerHighest,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
         child: Column(

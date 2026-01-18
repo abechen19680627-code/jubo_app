@@ -41,7 +41,7 @@ class HomeShellPage extends ConsumerWidget {
                         onPressed: () => Navigator.of(context).pop(false),
                         child: const Text('取消'),
                       ),
-                      ElevatedButton(
+                      FilledButton(
                         onPressed: () => Navigator.of(context).pop(true),
                         child: const Text('登出'),
                       ),
@@ -65,22 +65,25 @@ class HomeShellPage extends ConsumerWidget {
         index: index,
         children: _tabs,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: index,
-        onTap: (value) =>
+      bottomNavigationBar: NavigationBar(
+        animationDuration: const Duration(milliseconds: 380),
+        selectedIndex: index,
+        onDestinationSelected: (value) =>
             ref.read(homeTabIndexProvider.notifier).state = value,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
+        destinations: const [
+          NavigationDestination(
             icon: Icon(Icons.people_alt_outlined),
+            selectedIcon: Icon(Icons.people_alt),
             label: '成員',
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.restaurant_outlined),
+            selectedIcon: Icon(Icons.restaurant),
             label: '點餐',
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.insights_outlined),
+            selectedIcon: Icon(Icons.insights),
             label: '統計',
           ),
         ],

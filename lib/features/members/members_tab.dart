@@ -120,7 +120,7 @@ class _MembersTabState extends ConsumerState<MembersTab> {
               onPressed: () => Navigator.of(context).pop(false),
               child: const Text('取消'),
             ),
-            ElevatedButton(
+            FilledButton.tonal(
               onPressed: () => Navigator.of(context).pop(true),
               child: const Text('刪除'),
             ),

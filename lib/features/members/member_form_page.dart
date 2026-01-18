@@ -172,7 +172,7 @@ class _MemberFormPageState extends ConsumerState<MemberFormPage> {
             const SizedBox(height: 24),
             SizedBox(
               height: 48,
-              child: ElevatedButton(
+              child: FilledButton(
                 onPressed: _isSubmitting ? null : _submit,
                 child: Text(_isSubmitting ? '儲存中...' : '儲存'),
               ),

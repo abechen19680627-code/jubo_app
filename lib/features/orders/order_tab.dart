@@ -166,6 +166,7 @@ class _OrderRow extends StatelessWidget {
     final lunch = record?.lunch ?? false;
     final dinner = record?.dinner ?? false;
     return Card(
+      color: theme.colorScheme.surfaceContainerHighest,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
         child: Column(
